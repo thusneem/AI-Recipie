@@ -9,6 +9,12 @@ from bedrock import call_bedrock  # your Bedrock wrapper
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
+
+@app.route("/")
+def health():
+    return "OK", 200
+
+
 @app.route("/ask", methods=["POST"])
 def ask():
     data = request.json
