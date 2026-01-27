@@ -26,7 +26,10 @@ jobs:
     - name: Generate deployment package
       run: |
         cd recipe-ai-assistant-backend
-        zip -r ../deploy.zip .    
+        zip -r ../deploy.zip .
+        
+    - name: Verify ZIP structure
+      run: unzip -l deploy.zip     
 
     - name: Deploy to Elastic Beanstalk
       uses: einaregilsson/beanstalk-deploy@v21
