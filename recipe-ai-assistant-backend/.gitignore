@@ -3,3 +3,8 @@ __pycache__/
 .env
 *.pyc
 .aws/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
