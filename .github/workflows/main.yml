@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/backend || exit
+            cd /home/thusneem/AI-Recipie || exit
             git pull
             docker stop backend || true
             docker rm backend || true
