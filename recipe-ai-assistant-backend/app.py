@@ -12,7 +12,7 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
 
 @app.route("/")
 def health():
-    return "OK", 200
+    return "app is deployed", 200
 
 
 @app.route("/ask", methods=["POST"])
