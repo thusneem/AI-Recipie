@@ -1,5 +1,13 @@
+
 flask
 flask-cors
 gunicorn
 requests
 boto3
+uvicorn
+langchain
+langchain-core
+openai
+langchain_community
+langchain-aws
+
