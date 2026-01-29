@@ -3,7 +3,7 @@ import json
 
 client = boto3.client(
     "bedrock-runtime",
-    region_name="us-east-1"   
+    region_name="us-west-2"   
 )
 
 def call_bedrock(prompt: str) -> str:
