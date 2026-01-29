@@ -1,7 +1,8 @@
 name: Deploy Backend to EC2
 
 on:
-  branches:
+  push:
+    branches:
       - master
     paths:
       - 'recipe-ai-assistant-backend/**' # Only run for backend changes
