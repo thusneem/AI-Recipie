@@ -8,11 +8,7 @@ from rag.rag_pipeline import run_rag
 from bedrock import call_bedrock  # your Bedrock wrapper
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": [
-    "http://localhost:4200",
-    "https://recipe-ai-assistant-frontend.s3-website-us-west-2.amazonaws.com",
-    "http://recipe-ai-assistant-frontend.s3-website-us-west-2.amazonaws.com"
-]}})
+CORS(app)
 
 @app.route("/")
 def health():
