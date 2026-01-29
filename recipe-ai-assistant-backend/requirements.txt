@@ -4,7 +4,7 @@ flask-cors
 gunicorn
 requests
 boto3
-uvicorn
+gunicorn
 langchain
 langchain-core
 openai
