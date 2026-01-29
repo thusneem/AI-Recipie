@@ -4,11 +4,16 @@ flask-cors
 gunicorn
 requests
 boto3
-gunicorn
 langchain
 langchain-core
-openai
-langchain_community
 langchain-aws
+langchain_community
+openai
 faiss-cpu
+numpy
+pandas
+python-dotenv
+tqdm
+PyYAML
+
 
