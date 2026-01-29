@@ -10,4 +10,5 @@ langchain-core
 openai
 langchain_community
 langchain-aws
+faiss-cpu
 
