@@ -3,7 +3,7 @@ name: Deploy Browser to S3
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'recipie-ai-assisstance/**'  # Run only if this folder changes   
 
