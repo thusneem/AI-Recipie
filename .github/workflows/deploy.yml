@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'recipie-ai-assisstance/**'  # Run only if this folder changes   
 
 jobs:
   deploy:
