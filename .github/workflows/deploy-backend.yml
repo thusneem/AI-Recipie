@@ -25,5 +25,6 @@ jobs:
             git pull
             docker stop backend || true
             docker rm backend || true
+            cd /home/thusneem/AI-Recipie/recipe-ai-assistant-backend
             docker build -t backend .
             docker run -d --name backend -p 8000:8000 backend
