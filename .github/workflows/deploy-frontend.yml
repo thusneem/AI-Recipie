@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sync browser folder to S3
-        uses: jakejarvis/s3-sync-action@v0.6.0
+        uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --delete
         env:
