@@ -12,7 +12,7 @@ CORS(app)
 
 @app.route("/")
 def health():
-    return "app is deployed", 200
+    return "Backend App is deployed", 200
 
 
 @app.route("/ask", methods=["POST"])
