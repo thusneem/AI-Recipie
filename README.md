@@ -1,139 +1,115 @@
 🍳 AI Recipe Assistant
-
-An AI-powered recipe generation web application built with Angular, Python, and AWS Bedrock.
+An AI-powered recipe generation web application built with Angular, Python, AWS Bedrock, and Docker.
 The app generates personalized recipes based on ingredients, dietary preferences, and cuisine types using generative AI.
-
+________________________________________
 🚀 Features
-
-Generate recipes from available ingredients
-
-Personalized suggestions (dietary needs, cuisine preferences)
-
-Step-by-step cooking instructions
-
-AI-powered responses using AWS Bedrock foundation models
-
-Scalable cloud-based architecture
-
+•	Generate recipes from available ingredients
+•	Personalized suggestions (dietary needs, cuisine preferences)
+•	Step-by-step cooking instructions
+•	AI-powered responses using AWS Bedrock foundation models
+•	Retrieval-Augmented Generation (RAG) support
+•	Dockerized backend for consistent deployments
+•	Scalable cloud-based architecture
+________________________________________
 🏗️ Architecture Overview
-
-Frontend: Angular (hosted on Amazon S3)
-
-Backend: Python (Flask / FastAPI) running on Amazon EC2
-
-AI Service: AWS Bedrock (Claude / Titan models)
-
+•	Frontend: Angular (hosted on Amazon S3)
+•	Backend: Python (Flask / FastAPI) running in Docker on Amazon EC2
+•	AI Service: AWS Bedrock (Claude / Titan models)
 Hosting & Security
-
-Amazon S3 for static frontend hosting
-
-Amazon EC2 for backend API services
-
-IAM roles for secure Bedrock access
-
+•	Amazon S3 for static frontend hosting
+•	Amazon EC2 for backend containers
+•	IAM roles for secure Bedrock access
+________________________________________
 🔄 Application Flow
-
-User enters ingredients or preferences in the Angular UI
-
-Frontend sends a request to the Python backend API
-
-Backend constructs a prompt and calls AWS Bedrock
-
-Bedrock generates recipe content
-
-Backend returns formatted results to the frontend
-
+1.	User enters ingredients or preferences in the Angular UI
+2.	Frontend sends a request to the backend API
+3.	Backend (Docker container) constructs a prompt
+4.	Backend calls AWS Bedrock
+5.	AI-generated recipe is returned to the frontend
+________________________________________
 🧠 AI Integration (AWS Bedrock)
-
-Uses AWS Bedrock to access managed foundation models
-
-No model training or hosting required
-
+•	Uses AWS Bedrock to access managed foundation models
+•	No model training or hosting required
 Supported Capabilities
-
-Recipe generation
-
-Ingredient substitutions
-
-Cooking tips and variations
-
+•	Recipe generation
+•	Ingredient substitutions
+•	Cooking tips and variations
+________________________________________
 🛠️ Tech Stack
 Layer	Technology
 Frontend	Angular
 Backend	Python (Flask / FastAPI)
 AI	AWS Bedrock
 Cloud	Amazon EC2, Amazon S3
+DevOps	Docker, GitHub Actions
+Security	AWS IAM
+________________________________________
 📂 Project Structure
-AI-recipie/
+AI-recipe/
 ├── .github/
 │   └── workflows/
 │       ├── deploy-backend.yml
 │       └── deploy-frontend.yml
 │
-├── Recipie-ai-assisstant-backend/
+├── recipe-ai-assistant-backend/
 │   ├── Rag/
 │   │   ├── documents.py
 │   │   ├── rag_pipeline.py
 │   │   └── vector_store.py
 │   ├── bedrock.py
-│   ├── recipie_api.py
+│   ├── recipe_api.py
 │   ├── app.py
 │   ├── requirements.txt
+│   ├── Dockerfile
 │   └── .gitignore
 │
-├── Recipir-ai-assisstant/
+├── recipe-ai-assistant-frontend/
 │   └── browser/
 │       └── index.html
 │
 └── README.md
-
+________________________________________
+🐳 Docker Support (Backend)
+The backend is fully containerized using Docker for consistent development and deployment.
+Build Docker Image
+docker build -t recipe-ai-backend .
+Run Backend Container
+docker run -d -p 8000:8000 recipe-ai-backend
+________________________________________
 ⚙️ Setup Instructions
-Backend (Python on EC2)
+Backend (Docker – Recommended)
+docker build -t recipe-ai-backend .
+docker run -p 8000:8000 recipe-ai-backend
+Ensure the EC2 instance uses an IAM role with Bedrock access.
+________________________________________
+Backend (Without Docker)
 pip install -r requirements.txt
 python app.py
-
-
-Ensure your EC2 instance has an IAM role with AWS Bedrock access.
-
+________________________________________
 Frontend (Angular)
 npm install
 ng build --configuration production
-
-
 Upload the generated build files to an S3 bucket configured for static website hosting.
-
+________________________________________
 🚀 Deployment
-
-Backend is deployed automatically to EC2 using GitHub Actions and SSH
-
-Frontend is deployed to Amazon S3 on every push to the main branch
-
-CI/CD ensures consistent and repeatable deployments
-
+•	Backend is deployed to EC2 as a Docker container using GitHub Actions
+•	Frontend is deployed to Amazon S3 on every push to the main branch
+•	CI/CD ensures consistent and repeatable deployments
+________________________________________
 🔐 Security
-
-IAM roles used instead of hardcoded credentials
-
-AWS Bedrock access restricted by least-privilege policies
-
+•	IAM roles used instead of hardcoded credentials
+•	AWS Bedrock access restricted by least-privilege policies
+________________________________________
 🌱 Future Enhancements
-
-User authentication
-
-Saved and favorite recipes
-
-Nutrition and calorie breakdown
-
-Multi-language support
-
-Voice-based recipe assistant
-
+•	User authentication
+•	Saved and favorite recipes
+•	Nutrition and calorie breakdown
+•	Multi-language support
+•	Voice-based recipe assistant
+•	Container orchestration (ECS / EKS)
+________________________________________
 📌 Use Cases
-
-Home cooking assistance
-
-Meal planning applications
-
-AI-powered food recommendation systems
-
-Cloud and Generative AI demonstrations
+•	Home cooking assistance
+•	Meal planning applications
+•	AI-powered food recommendation systems
+•	Cloud and Generative AI demonstrations
