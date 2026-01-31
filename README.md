@@ -1,8 +1,8 @@
-🍳 AI Recipe Assistant
+#AI Recipe Assistant
 
 An AI-powered recipe generation web application built using Angular, Python, and AWS Bedrock. The app allows users to generate personalized recipes based on ingredients, dietary preferences, and cuisine types using generative AI.
 
-🚀 Features
+##Features
 
 Generate recipes from available ingredients
 
@@ -14,7 +14,7 @@ AI-powered responses using AWS Bedrock foundation models
 
 Scalable cloud-based architecture
 
-🏗️ Architecture Overview
+ ##Architecture Overview
 
 Frontend: Angular (hosted on Amazon S3)
 
@@ -30,7 +30,7 @@ EC2 for backend API services
 
 IAM roles for secure Bedrock access
 
-🔄 Application Flow
+##Application Flow
 
 User enters ingredients or preferences in the Angular UI
 
@@ -42,7 +42,7 @@ Bedrock generates recipe content
 
 Backend returns formatted results to the frontend
 
-🧠 AI Integration (AWS Bedrock)
+##AI Integration (AWS Bedrock)
 
 Uses AWS Bedrock to access managed foundation models
 
@@ -56,23 +56,41 @@ Ingredient substitutions
 
 Cooking tips and variations
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	Angular, TypeScript, HTML, CSS
-Backend	Python, Flask / FastAPI
-AI Models	AWS Bedrock
-Cloud	Amazon EC2, Amazon S3
-Security	AWS IAM
-📂 Project Structure
-ai-recipe-assistant/
-├── frontend/          # Angular application
-├── backend/           # Python API (Flask/FastAPI)
+##Tech Stack
+| Layer      | Technology |
+|-----------|------------|
+| Frontend  | Angular |
+| Backend   | Python (Flask/FastAPI) |
+| AI        | AWS Bedrock |
+| Cloud     | EC2, S3 |
+
+
+##Project Structure
+AI-recipie/
+├── .github/
+│   └── workflows/
+│       ├── deploy-backend.yml
+│       └── deploy-frontend.yml
+│
+├── Recipie-ai-assisstant-backend/
+│   ├── Rag/
+│   │   ├── documents.py
+│   │   ├── rag_pipeline.py
+│   │   └── vector_store.py
+│   ├── bedrock.py
+│   ├── recipie_api.py
 │   ├── app.py
 │   ├── requirements.txt
-│   └── bedrock_client.py
-├── README.md
+│   └── .gitignore
+│
+├── Recipir-ai-assisstant/
+│   └── browser/
+│       └── index.html
+│
+└── README.md
 
-⚙️ Setup Instructions
+
+##Setup Instructions
 Backend (Python on EC2)
 pip install -r requirements.txt
 python app.py
@@ -87,13 +105,22 @@ ng build --configuration production
 
 Upload the build files to an S3 bucket configured for static website hosting.
 
-🔐 Security
+##Depolyment
+
+- **Backend** is deployed automatically to EC2 using GitHub Actions and SSH
+- 
+- **Frontend** is deployed to Amazon S3 on every push to `main`
+- 
+- CI/CD ensures consistent, repeatable deployments
+
+
+##Security
 
 IAM roles used instead of hardcoded credentials
 
 Bedrock access restricted by least-privilege policies
 
-🌱 Future Enhancements
+##Future Enhancements
 
 User authentication
 
@@ -105,7 +132,7 @@ Multi-language support
 
 Voice-based recipe assistant
 
-📌 Use Cases
+##Use Cases
 
 Home cooking assistance
 
