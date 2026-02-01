@@ -45,7 +45,7 @@ DevOps	Docker, GitHub Actions
 Security	AWS IAM
 ________________________________________
 📂 Project Structure
-AI-recipe/
+```AI-recipe/
 ├── .github/
 │   └── workflows/
 │       ├── deploy-backend.yml
@@ -68,7 +68,7 @@ AI-recipe/
 │       └── index.html
 │
 └── README.md
-________________________________________
+```___________________________________
 🐳 Docker Support (Backend)
 The backend is fully containerized using Docker for consistent development and deployment.
 Build Docker Image
