@@ -51,7 +51,7 @@ ________________________________________
 
 ________________________________________
 📂 Project Structure
-```
+
 AI-recipe/
 ├── .github/
 │   └── workflows/
@@ -75,7 +75,6 @@ AI-recipe/
 │       └── index.html
 │
 └── README.md
-```
 ___________________________________
 🐳 Docker Support (Backend)
 The backend is fully containerized using Docker for consistent development and deployment.
