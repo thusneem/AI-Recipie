@@ -36,13 +36,18 @@ Supported Capabilities
 •	Cooking tips and variations
 ________________________________________
 🛠️ Tech Stack
-Layer	Technology
-Frontend	Angular
-Backend	Python (Flask / FastAPI)
-AI	AWS Bedrock
-Cloud	Amazon EC2, Amazon S3
-DevOps	Docker, GitHub Actions
-Security	AWS IAM
+```
+|   Layer     |   Technology   | 
+|------------ |--------------- | 
+| Frontend    | Angular        | 
+| Backend     | Python (Flask) | 
+| AI          | AWS Bedrock    |
+| Cloud       | EC2, S3        |
+| DevOps      | Docker, GitHub Actions|
+| Security    | AWS IAM        |
+```
+
+
 ________________________________________
 📂 Project Structure
 ```
