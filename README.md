@@ -3,6 +3,7 @@ An AI-powered recipe generation web application built with Angular, Python, AWS 
 The app generates personalized recipes based on ingredients, dietary preferences, and cuisine types using generative AI.
 ________________________________________
 🚀 Features
+```
 •	Generate recipes from available ingredients
 •	Personalized suggestions (dietary needs, cuisine preferences)
 •	Step-by-step cooking instructions
@@ -79,19 +80,9 @@ ___________________________________
 🐳 Docker Support (Backend)
 The backend is fully containerized using Docker for consistent development and deployment.
 Build Docker Image
-docker build -t recipe-ai-backend .
+docker build -t backend .
 Run Backend Container
 docker run -d -p 8000:8000 recipe-ai-backend
-________________________________________
-⚙️ Setup Instructions
-Backend (Docker – Recommended)
-docker build -t recipe-ai-backend .
-docker run -p 8000:8000 recipe-ai-backend
-Ensure the EC2 instance uses an IAM role with Bedrock access.
-________________________________________
-Backend (Without Docker)
-pip install -r requirements.txt
-python app.py
 ________________________________________
 Frontend (Angular)
 npm install
@@ -120,3 +111,4 @@ ________________________________________
 •	Meal planning applications
 •	AI-powered food recommendation systems
 •	Cloud and Generative AI demonstrations
+```
