@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'recipie-ai-assisstance/browser/**'
+      - 'recipie-ai-assistant-frontend/browser/**'
 
 jobs:
   deploy:
