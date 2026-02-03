@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'recipe-ai-assistant-backend/**' # Only run for backend changes
+      - 'recipie-ai-assistant-backend/**' # Only run for backend changes
 jobs:
   deploy:
     runs-on: ubuntu-latest
